@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Marci Metzger Homes — Pahrump Realtor | Revamped Home</title>
+  <meta name="description" content="Pahrump, NV Realtor — Nearly three decades helping buyers & sellers. Get it SOLD. Commercial & residential. Rely on expertise."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0d10;
+      --panel:#12161b;
+      --muted:#8892a6;
+      --brand:#15c;
+      --brand-2:#2dd4bf;
+      --text:#eef2f7;
+      --ring: rgba(45,212,191,.45);
+      --card:#0f1318;
+      --accent: #243447;
+      --shadow: 0 10px 30px -10px rgba(0,0,0,.5);
+      --radius: 16px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:linear-gradient(180deg, var(--bg), #0e1116 40%, #0a0c0f 100%); color:var(--text); font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height:1.6}
+    a{color:inherit; text-decoration:none}
+    img{max-width:100%; display:block}
+    .container{max-width:1200px; margin:0 auto; padding:0 20px}
+    /* NAV */
+    .nav{position:sticky; top:0; z-index:50; background:rgba(8,10,14,.75); backdrop-filter: blur(10px); border-bottom:1px solid rgba(255,255,255,.06)}
+    .nav .wrap{display:flex; align-items:center; justify-content:space-between; padding:16px 0}
+    .brand{display:flex; align-items:center; gap:12px; font-weight:800; letter-spacing:.3px}
+    .brand .dot{width:10px;height:10px;border-radius:50%; background:linear-gradient(135deg,var(--brand-2), #38bdf8)}
+    .nav ul{display:flex; gap:18px; list-style:none; margin:0; padding:0}
+    .nav a{padding:8px 12px; border-radius:10px; font-weight:600; color:#dbe5f4}
+    .nav a:hover{background:#0f1722}
+    .call-now{background:linear-gradient(135deg,var(--brand-2), #38bdf8); color:#001018; padding:10px 14px; border-radius:12px; font-weight:800; box-shadow: var(--shadow)}
+    /* HERO */
+    .hero{position:relative; overflow:hidden; padding:64px 0 56px; border-bottom:1px solid rgba(255,255,255,.06)}
+    .hero .grid{display:grid; grid-template-columns:1.2fr .8fr; gap:36px; align-items:center}
+    @media (max-width: 900px){ .hero .grid{grid-template-columns:1fr; text-align:center} .hero .cta{justify-content:center} }
+    .eyebrow{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border:1px solid rgba(255,255,255,.14); background:rgba(255,255,255,.04); border-radius:999px; font-size:12px; color:#c6d3ea}
+    .eyebrow .spark{width:8px;height:8px; border-radius:50%; background:radial-gradient(circle at 30% 30%, #fff, #00ffe1 60%, transparent 70%)}
+    .hero h1{font-size:clamp(32px, 6vw, 56px); line-height:1.05; margin:14px 0 10px; letter-spacing:-.02em}
+    .hero p{color:#c7d2e5; font-size:clamp(16px, 2.6vw, 18px); margin:0 0 20px}
+    .cta{display:flex; gap:12px; align-items:center; margin-top:8px}
+    .btn{display:inline-flex; align-items:center; gap:10px; padding:12px 16px; border-radius:14px; font-weight:700; border:1px solid rgba(255,255,255,.12); background:#0d1219}
+    .btn.primary{background:linear-gradient(135deg,var(--brand-2), #38bdf8); color:#001018; border:none}
+    .btn:hover{transform:translateY(-1px); box-shadow:var(--shadow)}
+    .badge-row{display:flex; gap:12px; flex-wrap:wrap; margin-top:22px}
+    .badge{padding:8px 10px; border-radius:999px; border:1px dashed rgba(255,255,255,.18); font-size:12px; color:#b8c5dd}
+    .portrait{position:relative; padding:10px; background:linear-gradient(180deg, rgba(45,212,191,.25), rgba(56,189,248,.2)); border-radius:24px}
+    .portrait img{border-radius:18px}
+    /* STATS */
+    .section{padding:70px 0}
+    .section h2{font-size:clamp(26px, 3.6vw, 36px); margin:0 0 14px}
+    .muted{color:var(--muted)}
+    .cards{display:grid; grid-template-columns:repeat(3,1fr); gap:18px}
+    @media (max-width: 900px){ .cards{grid-template-columns:1fr} }
+    .card{background:linear-gradient(180deg, #0f1318, #0b0f14); border:1px solid rgba(255,255,255,.07); border-radius: var(--radius); padding:22px; box-shadow: var(--shadow)}
+    .card h3{margin:0 0 6px; font-size:20px}
+    .stat{font-size:34px; font-weight:800}
+    /* SERVICES */
+    .service{display:flex; gap:18px}
+    .service .icon{width:44px; height:44px; border-radius:12px; background:linear-gradient(135deg, #38bdf8, var(--brand-2)); display:flex; align-items:center; justify-content:center; font-weight:900; color:#001018}
+    /* GALLERY */
+    .gallery{display:grid; grid-template-columns:repeat(4, 1fr); gap:10px}
+    @media (max-width: 900px){ .gallery{grid-template-columns:repeat(2, 1fr)} }
+    .gallery a{position:relative; overflow:hidden; border-radius:14px; border:1px solid rgba(255,255,255,.08)}
+    .gallery img{width:100%; height:190px; object-fit:cover; transition: transform .25s ease}
+    .gallery a:hover img{transform:scale(1.04)}
+    /* CONTACT BAR */
+    .contact{display:grid; grid-template-columns:1.2fr .8fr; gap:26px; align-items:start}
+    @media (max-width: 900px){ .contact{grid-template-columns:1fr} }
+    .contact .panel{background:linear-gradient(180deg, #0f1318, #0b0f14); border:1px solid rgba(255,255,255,.07); border-radius: var(--radius); padding:22px; box-shadow:var(--shadow)}
+    .contact label{display:block; font-size:14px; color:#c7d2e5; margin:10px 0 6px}
+    .contact input, .contact textarea{width:100%; padding:12px 14px; border-radius:12px; border:1px solid rgba(255,255,255,.12); background:#0b0f14; color:var(--text)}
+    .contact button{margin-top:10px}
+    /* FOOTER */
+    footer{padding:26px 0 56px; border-top:1px solid rgba(255,255,255,.06); color:#a9b7d0}
+    .grid-3{display:grid; grid-template-columns: repeat(3, 1fr); gap:18px}
+    @media (max-width: 900px){ .grid-3{grid-template-columns:1fr} }
+    .pill{display:inline-block; border:1px solid rgba(255,255,255,.12); border-radius:999px; padding:6px 10px; font-size:12px; color:#c6d3ea}
+    .toast{position:fixed; right:16px; bottom:16px; background:linear-gradient(135deg, #38bdf8, var(--brand-2)); color:#001018; border-radius:12px; padding:10px 14px; font-weight:800; display:none}
+  </style>
+</head>
+<body>
+  <nav class="nav">
+    <div class="container wrap">
+      <div class="brand">
+        <span class="dot"></span>
+        <span>Marci Metzger Homes</span>
+      </div>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#listings">Listings</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a class="call-now" href="tel:+12069196886" aria-label="Call Marci now">Call Now</a>
+    </div>
+  </nav>
+
+  <header id="home" class="hero">
+    <div class="container grid">
+      <div>
+        <div class="eyebrow"><span class="spark"></span><span>MARCI METZGER — THE RIDGE REALTY GROUP</span></div>
+        <h1>Pahrump Realtor</h1>
+        <p>Realtor for nearly three decades helping buyers and sellers in Southern Nevada. Nobody knows the market like we do—whether you're buying, selling, or investing.</p>
+        <div class="cta">
+          <a class="btn primary" href="tel:+12069196886">📞 Call Now</a>
+          <a class="btn" href="#listings">🔎 Search Listings</a>
+          <a class="btn" href="#contact">✉️ Message Us</a>
+        </div>
+        <div class="badge-row">
+          <span class="badge">Top residential sales (last 5 yrs)</span>
+          <span class="badge">~90 clients helped in 2021</span>
+          <span class="badge">$28.5M closed in 2021</span>
+          <span class="badge">Open daily 8:00am – 7:00pm</span>
+        </div>
+      </div>
+      <div class="portrait">
+        <!-- Headshot sourced from marcimetzger.com -->
+        <img alt="Marci Metzger portrait" src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/photo-5db79f9.jpg/:/cr=t:14.65%25,l:0%25,w:100%25,h:66.64%25/rs=w:720,h:720,cg:true" />
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- STATS / PROOF -->
+    <section class="section">
+      <div class="container">
+        <h2>Get It <span style="background:linear-gradient(135deg,var(--brand-2),#38bdf8); -webkit-background-clip:text; background-clip:text; color:transparent">SOLD</span></h2>
+        <p class="muted">We exhaust every avenue to ensure listings are at the fingertips of every possible buyer, getting you top dollar for your home.</p>
+        <div class="cards" style="margin-top:18px">
+          <div class="card">
+            <div class="stat">28.5M</div>
+            <div class="muted">Closed volume (2021)</div>
+          </div>
+          <div class="card">
+            <div class="stat">~90</div>
+            <div class="muted">Clients helped (2021)</div>
+          </div>
+          <div class="card">
+            <h3>Guide to Buyers</h3>
+            <p class="muted">Market analysis, upgrade ideas, and trusted contractors on speed dial—so you’re confident every step of the way.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section" aria-labelledby="services-title">
+      <div class="container">
+        <h2 id="services-title">Our Services</h2>
+        <div class="cards">
+          <div class="card service">
+            <div class="icon">✓</div>
+            <div>
+              <h3>Real Estate Done Right</h3>
+              <p class="muted">Nervous about your property adventure? Don’t be. Whether you're getting ready to buy or sell your residence, exploring investments, or just curious about the market—our team makes it smooth.</p>
+            </div>
+          </div>
+          <div class="card service">
+            <div class="icon">🏡</div>
+            <div>
+              <h3>Commercial & Residential</h3>
+              <p class="muted">Large or small, condo or mansion—we can find it and get it at the price that’s right. Fixer-upper or luxury? We’re locals who live, work, and play here.</p>
+            </div>
+          </div>
+          <div class="card service">
+            <div class="icon">📊</div>
+            <div>
+              <h3>Rely on Expertise</h3>
+              <p class="muted">Questions about affordability, credit, and loan options? We’ll connect you with the right people to get answers fast—so you feel confident and educated from start to finish.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LISTINGS / MLS CTA -->
+    <section id="listings" class="section" aria-labelledby="listings-title">
+      <div class="container">
+        <h2 id="listings-title">Find Your Dream Home</h2>
+        <p class="muted">Browse available homes in Pahrump & Las Vegas. Filter by price, bedrooms, and more.</p>
+        <div class="cards">
+          <div class="card">
+            <h3>Search Listings</h3>
+            <p class="muted">Jump straight into current listings. Sort by newest, price, beds, and baths.</p>
+            <a class="btn primary" href="https://marcimetzger.com/listings" target="_blank" rel="noopener">Open Listings</a>
+          </div>
+          <div class="card">
+            <h3>Call or Text</h3>
+            <p class="muted">Prefer a curated list? Reach out and we’ll send options that match your needs today.</p>
+            <a class="btn" href="sms:+12069196886">Text Marci</a>
+          </div>
+          <div class="card">
+            <h3>Visit the Office</h3>
+            <p class="muted">3190 HW-160, Suite F, Pahrump, NV 89048. Appointments available outside office hours—just call.</p>
+            <a class="btn" href="#contact">Get Directions</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="section" aria-labelledby="gallery-title">
+      <div class="container">
+        <h2 id="gallery-title">Photo Gallery</h2>
+        <p class="muted">Highlights from our recent work and local community. (Images load directly from marcimetzger.com.)</p>
+        <div class="gallery">
+          <!-- Known headshot image -->
+          <a href="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/photo-5db79f9.jpg/:/cr=t:14.65%25,l:0%25,w:100%25,h:66.64%25/rs=w:1280,h:1280,cg:true" target="_blank" rel="noopener">
+            <img alt="Marci portrait" src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/photo-5db79f9.jpg/:/cr=t:14.65%25,l:0%25,w:100%25,h:66.64%25/rs=w:480,h:480,cg:true">
+          </a>
+          <!-- Placeholder slots that you can populate with additional image URLs from the site -->
+          <a href="https://marcimetzger.com/" target="_blank" rel="noopener">
+            <img alt="Property image placeholder" src="https://img1.wsimg.com/isteam/stock/107927/:/rs=w:1200,h:600,cg:true,m/cr=w:1200,h:600">
+          </a>
+          <a href="https://marcimetzger.com/" target="_blank" rel="noopener">
+            <img alt="Community image placeholder" src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4787%20E%20Beacon%20Ridge-54.jpg-SMALL.JPG/:/rs=w:984,h:655">
+          </a>
+          <a href="https://marcimetzger.com/" target="_blank" rel="noopener">
+            <img alt="Home exterior placeholder" src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-45.jpg-SMALL.JPG/:/rs=w:984,h:655">
+          </a>
+          <a href="https://marcimetzger.com/" target="_blank" rel="noopener">
+            <img alt="Interior placeholder" src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-14.jpg-SMALL.JPG/:/cr=t:0%25,l:0.05%25,w:99.9%25,h:99.9%25/rs=w:984,h:655">
+          </a>
+          <a href="https://marcimetzger.com/" target="_blank" rel="noopener">
+            <img alt="Desert landscape placeholder" src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/4460%20Roseworthy-52.jpg-SMALL.JPG/:/rs=w:984,h:655">
+          </a>
+          <a href="https://marcimetzger.com/" target="_blank" rel="noopener">
+            <img alt="Kitchen placeholder" src="https://img1.wsimg.com/isteam/stock/3395/:/cr=t:11.02%25,l:0%25,w:100%25,h:77.95%25/rs=w:1200,h:600,cg:true">
+          </a>
+          <a href="https://marcimetzger.com/" target="_blank" rel="noopener">
+            <img alt="Backyard placeholder" src="https://img1.wsimg.com/isteam/ip/067a4d42-19e8-46d9-9bed-578bf62dd44e/5570%20Ailanto-50.jpg-SMALL.JPG/:/rs=w:984,h:655">
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title">About Marci</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Marci J Metzger</h3>
+            <p class="muted">Marci was a REALTOR®, then licensed Broker, in Washington State. Now she enjoys the sunshine and helps clients in Southern Nevada. Having helped buyers and sellers in many markets since 1995, she’s a wealth of knowledge.</p>
+            <p class="muted"><em>“I love that small-town feeling that our community offers. Spectacular golf courses, parks, pool, and easy access to Las Vegas make Pahrump a great place to call home... There’s a place for you here!”</em></p>
+          </div>
+          <div class="card">
+            <h3>Office Hours</h3>
+            <p class="muted">Open daily 8:00 am – 7:00 pm. Appointments outside office hours available on request—just call.</p>
+            <span class="pill">Pahrump • Southern Nevada</span>
+          </div>
+          <div class="card">
+            <h3>Specialties</h3>
+            <p class="muted">Buyer’s agent • Listing agent • Relocation • Staging</p>
+            <a class="btn" href="https://www.zillow.com/profile/marcimetzger" target="_blank" rel="noopener">See Activity</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <div class="container contact">
+        <div class="panel">
+          <h2 id="contact-title">Call or Visit</h2>
+          <p class="muted">Message us on WhatsApp or send an email—we’ll get back quickly.</p>
+          <div class="grid-3">
+            <div>
+              <div><strong>Marci Metzger — THE RIDGE REALTY GROUP</strong></div>
+              <div>3190 HW-160, Suite F, Pahrump, Nevada 89048, United States</div>
+              <div><a href="tel:+12069196886">(206) 919-6886</a></div>
+              <div><a href="mailto:marcimetzger@gmail.com">marcimetzger@gmail.com</a></div>
+              <div style="margin-top:10px"><a class="btn" href="https://wa.me/" target="_blank" rel="noopener">Message on WhatsApp</a></div>
+            </div>
+            <div>
+              <div class="pill">Open today 08:00 am – 07:00 pm</div>
+              <p class="muted">Appointments outside office hours available upon request. Just call!</p>
+            </div>
+            <div>
+              <form onsubmit="return sendContact(event)">
+                <label for="name">Name</label>
+                <input id="name" name="name" required />
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required />
+                <label for="msg">Message</label>
+                <textarea id="msg" name="message" rows="4" placeholder="How can we help?"></textarea>
+                <button class="btn primary" type="submit">Send Message</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="panel">
+          <h3>Why clients choose us</h3>
+          <ul class="muted">
+            <li>Nearly 30 years of experience</li>
+            <li>Deep local knowledge of Pahrump & Southern Nevada</li>
+            <li>Full-service support from search to closing</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="container">
+    <div class="grid-3">
+      <div>
+        <strong>Marci Metzger Homes</strong>
+        <p class="muted">Your partner in finding the perfect property.</p>
+      </div>
+      <div>
+        <div class="pill">Equal Housing Opportunity</div>
+      </div>
+      <div style="text-align:right">
+        <div>© <span id="year"></span> Marci Metzger Homes — All Rights Reserved</div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" role="status">Message sent!</div>
+
+  <script>
+    // Smooth anchors
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(el){ e.preventDefault(); el.scrollIntoView({behavior:'smooth', block:'start'}); }
+      });
+    });
+    // Fake "send" handler to show a toast (replace with your backend/email service if available)
+    function sendContact(e){
+      e.preventDefault();
+      const t = document.getElementById('toast');
+      t.style.display='inline-flex';
+      setTimeout(()=> t.style.display='none', 1800);
+      e.target.reset();
+      return false;
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
